@@ -3,7 +3,7 @@ package com.pluckerpluck.votesim.election;
 /**
  * Candidate
  */
-public class Candidate {
+public final class Candidate {
     private final String name;
 
     public Candidate (String name) {
@@ -12,6 +12,11 @@ public class Candidate {
 
     @Override
     public boolean equals(Object o) {
+        // Quick check first (as likely in this codebase)
+        if (this == o) {
+            return true;
+        }
+
         if (!(o instanceof Candidate)) {
             return false;
         }

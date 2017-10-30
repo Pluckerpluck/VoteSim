@@ -14,7 +14,7 @@ public class RangeHonestStrategy extends Strategy {
         Ballot ballot = new Ballot();
         for(Candidate candidate : utility.keySet()) {
             double value = utility.get(candidate);
-            ballot.addVote(candidate, (int)Math.round(value * 10));
+            ballot.addVote(candidate, (int)Math.round((value + 1) * 5));
         }
         return ballot;
     }

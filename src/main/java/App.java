@@ -33,8 +33,8 @@ public class App {
         // Create a bunch of A lovers!
         Map<Candidate, Double> aLoversUtility = new HashMap<>();
         aLoversUtility.put(candidateA, 1.);
-        aLoversUtility.put(candidateB, 0.1);
-        aLoversUtility.put(candidateC, 0.);
+        aLoversUtility.put(candidateB, 0.);
+        aLoversUtility.put(candidateC, -1.);
 
         for (int i = 0; i < 2000; i++) {
             voters.add(new Voter(aLoversUtility));
